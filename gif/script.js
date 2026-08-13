@@ -9,8 +9,9 @@ class gif(debug) {
     this.div=    document.html.body.createElement('div');
     this.extension= this.src.match(/(gif|png|jpg|jpeg|mpv|mov|mp4)$/);
     this.div.innerHTML= (this.extension.match(/(?:gif|png|jpg|jpeg)$/)? `<img src="${this.src}" class="gif">` : `<video controls><source src="${this.src}" type="video/${this.extension}"></video>`);
-    
-    if (gif.debug) console.log(`div: ${this.div} extension: ${this.extension} src: ${this.src}`);
+    //if (gif.debug)
+    console.log(`div: ${this.div} extension: ${this.extension} src: ${this.src}`);
   }
 }
 
+div = new gif(true).constructor(350,350,'/gif/Tabbypac-pat-beg.gif');

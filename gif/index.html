@@ -3,19 +3,70 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, height=device-height initial-scale=1.0">>
+    <meta name="viewport" content="width=device-width, height=device-height initial-scale=1.0">
     <title> gifs :3 - farax3.xyz</title>
   </head>
 
-  <header style="width: device-width; height: 10%; max-height: 200px;">
-
+  <header id="header" style="width: device-width; height: 10%; max-height: 200px;" class="background-dark">
+    <h3>Heya :3</h3>
   </header>
 
-  <body>
-    <div id="gif-container">
+  <body id="body">
+    <div id="gif-container" style="width: device-width; height: 100%;" class="background-dark">
     </div>
   </body>
 </html>
 
-<script src="script.js">
+<style>
+  header {
+    outline: 10px;
+    outline: #00bbff;
+  }
+
+  html {
+    background: #242424;
+    color: azure;
+  }
+  
+</style>
+
+<script>
+  var fs = require('fs');
+  console.log(fs.readdirSync('./'));
+
+  var gifs= [];
+  for (let i=0;i<files.length;i++) {
+    //
+  }
+
+
+  var document= new Document()
+
+  class Gif {
+    constructor(width,height,src) {
+      this.src=    src;
+      this.width=  width;
+      this.maxHidth= width;
+      this.height= height;
+      this.maxHeight= height;
+      console.log(document);
+      this.div= document.createElement('div');
+      this.extension= this.src.match(/\.(gif|png|jpg|jpeg|mpv|mov|mp4)$/)[1];
+      this.div.innerHTML= (this.extension.match(/(?:gif|png|jpg|jpeg)$/)? `<img src="${this.src}" class="gif">` : `<video controls><source src="${this.src}" type="video/${this.extension}"></video>`);
+      this.div.style.width= "auto";
+      this.div.style.maxWidth= this.maxWidth;
+      this.div.style.height= "auto";
+      this.div.style.maxHeight= this.maxHeight;
+      //if (gif.debug)
+      console.log(document.getElementById('gif-container').appendChild(this.div));
+      console.log(`div: ${this.div} extension: ${this.extension} src: ${this.src}`);
+    }
+
+    function() {
+      a=1;
+    }
+  }
+
+  var gif='Tabbypac-pat-beg.gif'
+  div = new Gif('350px','350px',gif);
 </script>
